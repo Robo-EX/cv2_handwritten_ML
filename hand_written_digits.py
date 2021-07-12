@@ -26,10 +26,6 @@ def getContours(binary_image):
     return contours
 
 
-class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
-               'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
-
-
 def process_contours(binary_image, rgb_image, contours):
     black_image = binary_image
     cv2.drawContours(rgb_image, contours, -1, (255, 0, 0), 1)
